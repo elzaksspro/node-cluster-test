@@ -1,4 +1,4 @@
-# Node Cluster VS Nginx load balance
+# `Node Cluster` VS `Nginx Load Balance`
 
 ## 实验步骤
 
@@ -270,7 +270,7 @@ ab -c 50 -n 3000 http://127.0.0.1:8000
 ## 实验结论
 
 * `node cluster` 较 `ngixn load balnace` 性能更好,耗时更少。
-* `node cluster` 较 `ngixn load balnace` 稳定性更好, nginx在分发请求时出现block，而`node cluster`一直都很稳定。
-* 如果服务器有多cpu，建议采用`node cluster`的方式，性能好、配置简单。
+* `node cluster` 较 `ngixn load balnace` 稳定性更好, 在多并发数的情况下，nginx在处理分发请求时会出现block，而`node cluster`一直都很稳定。
+* 如果服务器有多cpu，建议采用`node cluster`的方式，性能好、配置简单、只占用一个端口。
 
 
